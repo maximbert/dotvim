@@ -11,6 +11,8 @@ endif
 
 colorscheme molokai
 
+filetype plugin on
+
 set gfn=Menlo\ for\ Powerline:h18
 
 let macvim_skip_cmd_opt_movement = 1
