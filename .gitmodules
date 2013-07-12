@@ -28,3 +28,6 @@
 [submodule "bundle/coffeescript"]
 	path = bundle/coffeescript
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/stylus"]
+	path = bundle/stylus
+	url = https://github.com/wavded/vim-stylus.git
