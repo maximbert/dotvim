@@ -105,6 +105,7 @@ nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 
 map <F5> :NERDTreeToggle<CR>
+nnoremap <F6> :GundoToggle<CR>
 
 " tab navigation like firefox
 nmap <C-S-tab> :tabprevious<CR>
