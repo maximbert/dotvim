@@ -15,6 +15,8 @@ set gfn=Menlo\ for\ Powerline:h18
 
 let macvim_skip_cmd_opt_movement = 1
 
+let g:gitgutter_highlight_lines = 1
+
 "set nu!
 highlight! link FoldColumn Normal " Make it the background colour
 highlight NonText ctermfg=black  " Match the tildes to your background
