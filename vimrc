@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 colorscheme molokai
 
 "set gfn=Monaco:h17
