@@ -5,25 +5,15 @@ set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 if has("gui_running")
    let s:uname = system("uname")
       if s:uname == "Darwin\n"
-            set guifont=Meslo\ LG\ S\ for\ Powerline
+            "set guifont=Meslo\ LG\ S\ for\ Powerline
    endif
 endif
 
 colorscheme molokai
 
-"set gfn=Monaco:h17
-"set gfn=Source\ Code\ Pro\ for\ Powerline:h17
 set gfn=Menlo\ for\ Powerline:h18
 
-"python from powerline.ext.vim import source_plugin
-"source_plugin()
-"set rtp+=~/.vim/powerline/bindings/vim
-
-
-
-
 let macvim_skip_cmd_opt_movement = 1
-
 
 "set nu!
 highlight! link FoldColumn Normal " Make it the background colour
@@ -223,8 +213,6 @@ map N Nzz
 map n nzz
 
 
-
-
 vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>
 
 
@@ -240,11 +228,9 @@ autocmd BufWritePre *.coffee :%s/\s\+$//e
 
 
 " Removes trailing spaces
-function TrimWhiteSpace()
+:function! TrimWhiteSpace()
   %s/\s*$//
   ''
 :endfunction
 
 nmap J J:call TrimWhiteSpace()<CR>
-
-nnoremap <F6> :GundoToggle<CR>
