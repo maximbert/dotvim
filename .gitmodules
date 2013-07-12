@@ -10,3 +10,6 @@
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "bundle/matrix-screensave"]
+	path = bundle/matrix-screensave
+	url = https://github.com/uguu-org/vim-matrix-screensaver.git
