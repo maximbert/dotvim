@@ -1,10 +1,19 @@
 execute pathogen#infect()
 
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+if has("gui_running")
+   let s:uname = system("uname")
+      if s:uname == "Darwin\n"
+            set guifont=Meslo\ LG\ S\ for\ Powerline
+   endif
+endif
+
 colorscheme molokai
 
 "set gfn=Monaco:h17
 "set gfn=Source\ Code\ Pro\ for\ Powerline:h17
-set gfn=Menlo\ for\ Powerline:h17
+set gfn=Menlo\ for\ Powerline:h18
 
 "python from powerline.ext.vim import source_plugin
 "source_plugin()
