@@ -13,3 +13,6 @@
 [submodule "bundle/matrix-screensave"]
 	path = bundle/matrix-screensave
 	url = https://github.com/uguu-org/vim-matrix-screensaver.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
