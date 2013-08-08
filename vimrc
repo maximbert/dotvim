@@ -239,3 +239,6 @@ autocmd BufWritePre *.coffee :%s/\s\+$//e
 :endfunction
 
 nmap J J:call TrimWhiteSpace()<CR>
+
+nmap gh <Plug>GitGutterNextHunk
+nmap gH <Plug>GitGutterPrevHunk
