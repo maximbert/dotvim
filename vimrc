@@ -1,6 +1,7 @@
 execute pathogen#infect()
 
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 if has("gui_running")
    let s:uname = system("uname")
