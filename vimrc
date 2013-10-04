@@ -3,23 +3,32 @@ execute pathogen#infect()
 colorscheme molokai
 set gfn=Menlo\ for\ Powerline:h17
 
-filetype plugin on
 let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+filetype plugin on
 
 let macvim_skip_cmd_opt_movement = 1
 
 let g:gitgutter_highlight_lines = 1
 
-"set nu!
-highlight! link FoldColumn Normal " Make it the background colour
-highlight NonText ctermfg=black  " Match the tildes to your background
+set noshowmode     " hide the mode below powerline
+
 set showcmd
-set foldcolumn=3                  " Add a left margin
+set foldcolumn=4                  " Add a left margin
 set showtabline=0                 " don't show the tab bar
+
 set relativenumber
+
+"if no extension, assume casual text, and hide line numbers
+"au BufNewFile,BufRead * if &ft == ''
+"  set nonumber
+"else
+"  set relativenumber
+"  autocmd InsertEnter * :set invnumber "nonumber
+"  autocmd InsertLeave * :set number
+"endif
 
 ino jj <esc>
 cno jj <c-c>
@@ -32,11 +41,12 @@ set cindent
 set smartindent
 set autoindent
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=4                       " spaces per tab
+set shiftwidth=4                    " spaces per tab (when shifting)
+set softtabstop=4                   " spaces per tab (when editing)
 set cinkeys=0{,0},:,0#,!^F
 "set cinkeys=0{,0},:,0#,!,!^F,0[
-set smartcase           " but become case sensitive if you type uppercase characters
+set smartcase     " but become case sensitive if you type uppercase characters
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -45,7 +55,7 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 set scrolloff=9
-"set scrolloff=9999      "keep current line in the middle of the screen where I can see it !
+"set scrolloff=9999     "keep current line in the middle of the screen
 set cursorline          "highlight current line :)
 
 " allow movement in Insert mode (with alt+j and alt+k)
@@ -54,11 +64,16 @@ imap ¬ <Right>
 imap Ï <Down>
 imap È <Up>
 
+nnoremap j gj
+nnoremap k gk
+
 "moving lines up and down (with alt+j and alt+k)
 nnoremap Ï :m .+1<CR>==
 nnoremap È :m .-2<CR>==
 vmap Ï :m'>+<CR>gv=gv
 vmap È :m-2<CR>gv=gv
+
+" rarely used, perhaps to remove/clean up
 inoremap <A-Down> <Esc>:m .+1<CR>==gi
 inoremap <A-Up> <Esc>:m .-2<CR>==gi
 
@@ -68,17 +83,23 @@ if has("gui_running")
     set guioptions-=r       "remove scrollbar in MacVim
 endif
 
+" mute any bells!
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 set showmatch                   " show matching brackets/parenthesis
+"set matchtime=5                " blink matching chars for .x seconds
+
 set incsearch                   " find as you type search
 set hlsearch                    " highlight search terms
 set ignorecase                  " case insensitive search
 
-" hide highlighting (once finished searching for a pattern)
-nnoremap <CR> :noh<CR><CR>
-nnoremap <Esc> :noh<CR><Esc>
-"<return> was used before if that changes anything...
+" hide highlighting (after a searching), and clear the status line
+"nnoremap <CR> :noh<CR><CR>:echo ''<CR>      " ENTER is already used
+nnoremap <Esc> :noh<CR><Esc>:echo ''<CR>
 
 set wildmenu
+set wildmode=longest:full,full
 
 let mapleader="ù"
 nnoremap <Leader>1 :1b<CR>
@@ -135,6 +156,11 @@ nmap <S-tab> 0xx^
 
 
 "imap { {<CR><Tab><CR>}<Esc>k$i
+"
+"inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+"inoremap {{     {
+inoremap {}     {}
 
 imap <tab> <C-P>
 
@@ -222,7 +248,7 @@ let g:Powerline_symbols = 'fancy'
 let g:NERDTreeDirArrows=0
 
 
-" strip trailling spaces at the end every line of any saved coffeescript file
+"strip trailling spaces at the end every line of any saved coffeescript file
 autocmd BufWritePre *.coffee :%s/\s\+$//e
 
 
@@ -236,3 +262,17 @@ nmap J J:call TrimWhiteSpace()<CR>
 
 nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
+
+highlight! link FoldColumn Normal " Make it the background colour
+highlight NonText ctermfg=black  " Match the tildes to your background
+highlight NonText guifg=bg " hide tildes... this one works
+
+" highlight all characters past 80 columns
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+  autocmd BufEnter * match OverLength /\%80v.*/
+augroup END
+
+if exists('+colorcolumn')     " Vim v7.3 settings·
+  set colorcolumn=80          " Mark ideal text width (set by textwidth)
+endif
