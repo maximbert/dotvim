@@ -1,20 +1,13 @@
 execute pathogen#infect()
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-
-if has("gui_running")
-   let s:uname = system("uname")
-      if s:uname == "Darwin\n"
-            "set guifont=Meslo\ LG\ S\ for\ Powerline
-   endif
-endif
-
 colorscheme molokai
+set gfn=Menlo\ for\ Powerline:h17
 
 filetype plugin on
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
-set gfn=Menlo\ for\ Powerline:h17
 
 let macvim_skip_cmd_opt_movement = 1
 
