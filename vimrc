@@ -183,10 +183,8 @@ nmap <Space> i<space><Esc>l
 syn match comment "\v(^\s*//.*\n)+" fold
 
 
-
 map <C-j> 4j
 map <C-k> 4k
-
 
 
 "To change two vertically split windows to horizonally split
@@ -199,7 +197,6 @@ map <C-k> 4k
 
 abbr co console.log
 ""nmap // s/^/#
-
 
 
 " turn on syntax highlighting for CoffeeScript (using ~/.vim/syntax/coffee.vim)
@@ -222,7 +219,7 @@ inoremap # x<Esc>r#a
 " set indent to be 2 caracter long
 au FileType coffee setl sw=2 sts=2 et
 
-" on French keyboard, the backtick ` is a dead key, so use the apostrophe instead
+" on French keyboard the backtick ` is a dead key, use the apostrophe instead
 nmap ' `
 
 nmap à a
