@@ -273,3 +273,22 @@ augroup END
 if exists('+colorcolumn')     " Vim v7.3 settings·
   set colorcolumn=80          " Mark ideal text width (set by textwidth)
 endif
+
+"nnoremap <silent> <Leader>r :VimroomToggle<CR>:AirlineToggle<CR>
+nnoremap <silent> <Leader>m  :call ToggleVimRoom()<CR>
+
+
+" hack: Quit after exiting Vimroom
+let g:airline_on = 0
+function! ToggleVimRoom()
+  if g:airline_on
+    let g:airline_on = 0
+    VimroomToggle            "hide vimroom
+    quit
+  else
+    let g:airline_on = 1
+    AirlineToggle             "hide airline
+    VimroomToggle
+  endif
+endfunction
+
