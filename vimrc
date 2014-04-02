@@ -64,8 +64,8 @@ imap ¬ <Right>
 imap Ï <Down>
 imap È <Up>
 
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 
 "moving lines up and down (with alt+j and alt+k)
 nnoremap Ï :m .+1<CR>==
@@ -292,3 +292,5 @@ function! ToggleVimRoom()
   endif
 endfunction
 
+"temp fix for Kinesys Advantage Keyboard
+nnoremap > @
