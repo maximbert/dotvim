@@ -260,6 +260,8 @@ nmap J J:call TrimWhiteSpace()<CR>
 nmap gh <Plug>GitGutterNextHunk
 nmap gH <Plug>GitGutterPrevHunk
 
+map <c-b> :call JsBeautify()<cr>
+
 highlight! link FoldColumn Normal " Make it the background colour
 highlight NonText ctermfg=black  " Match the tildes to your background
 highlight NonText guifg=bg " hide tildes... this one works
