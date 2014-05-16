@@ -61,3 +61,6 @@
 [submodule "bundle/jsbeautify"]
 	path = bundle/jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "bundle/go-lang"]
+	path = bundle/go-lang
+	url = https://github.com/jnwhiteh/vim-golang.git
