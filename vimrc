@@ -296,3 +296,16 @@ endfunction
 
 "temp fix for Kinesys Advantage Keyboard
 nnoremap > @
+
+
+" swap files (.swp) in a common location
+" // means use the file's full path
+set dir=~/.vim/_swap//
+
+" backup files (~) in a common location if possible
+set backup
+set backupdir=~/.vim/_backup/,~/tmp,.
+
+" turn on undo files, put them in a common location
+set undofile
+set undodir=~/.vim/_undo/
