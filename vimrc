@@ -16,7 +16,7 @@ let g:gitgutter_highlight_lines = 1
 set noshowmode     " hide the mode below powerline
 
 set showcmd
-set foldcolumn=4                  " Add a left margin
+set foldcolumn=5                  " Add a left margin
 set showtabline=0                 " don't show the tab bar
 
 set relativenumber
@@ -41,9 +41,9 @@ set cindent
 set smartindent
 set autoindent
 set expandtab
-set tabstop=4                       " spaces per tab
-set shiftwidth=4                    " spaces per tab (when shifting)
-set softtabstop=4                   " spaces per tab (when editing)
+set tabstop = 2                       " spaces per tab
+set shiftwidth = 2                    " spaces per tab (when shifting)
+set softtabstop = 2                   " spaces per tab (when editing)
 set cinkeys=0{,0},:,0#,!^F
 "set cinkeys=0{,0},:,0#,!,!^F,0[
 set smartcase     " but become case sensitive if you type uppercase characters
@@ -80,7 +80,7 @@ inoremap <A-Up> <Esc>:m .-2<CR>==gi
 if has("gui_running")
     "set guioptions=egmrt    "remove toolbar in MacVim
     set guioptions-=T        "remove toolbar in MacVim
-    set guioptions-=r       "remove scrollbar in MacVim
+    set guioptions-=r        "remove scrollbar in MacVim
 endif
 
 " mute any bells!
