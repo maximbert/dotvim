@@ -41,9 +41,9 @@ set cindent
 set smartindent
 set autoindent
 set expandtab
-set tabstop = 2                       " spaces per tab
-set shiftwidth = 2                    " spaces per tab (when shifting)
-set softtabstop = 2                   " spaces per tab (when editing)
+set tabstop=2                       " spaces per tab
+set shiftwidth=2                    " spaces per tab (when shifting)
+set softtabstop=2                   " spaces per tab (when editing)
 set cinkeys=0{,0},:,0#,!^F
 "set cinkeys=0{,0},:,0#,!,!^F,0[
 set smartcase     " but become case sensitive if you type uppercase characters
