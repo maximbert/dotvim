@@ -309,3 +309,7 @@ set backupdir=~/.vim/_backup/,~/tmp,.
 " turn on undo files, put them in a common location
 set undofile
 set undodir=~/.vim/_undo/
+
+" Ctrl+P
+nnoremap <leader>p :CtrlPMixed<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
