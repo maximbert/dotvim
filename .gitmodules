@@ -67,3 +67,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/fanfingtastic"]
+	path = bundle/fanfingtastic
+	url = https://github.com/dahu/vim-fanfingtastic.git
