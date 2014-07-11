@@ -188,9 +188,11 @@ map <C-k> 4k
 "Horizontally to vertically:
 "Ctrl-W t Ctrl-W H
 
-
-abbr co console.log
 ""nmap // s/^/#
+iabbr fun function(){};<esc>hi
+"to use, type 'co(', i.e. with the parenthesis)
+iabbr co console.log);<esc>hi
+"iabbr co console.log
 
 
 " turn on syntax highlighting for CoffeeScript (using ~/.vim/syntax/coffee.vim)
