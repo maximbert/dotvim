@@ -129,7 +129,6 @@ imap <C-t> <Esc>:tabnew<CR>
 "the following conflicts with Window mode
 "map <C-w> <Esc>:tabclose<CR>
 
-
 " comment line... I wish it could toggle too
 map <Bslash><Bslash> :s/^/\/\/<CR><Esc>==
 "map ùù :s/\/\//wxw/g<CR><CR>:s/wxw//g<CR><CR>:s/^/\/\//<CR><CR>
@@ -154,7 +153,6 @@ nmap <S-tab> 0xx^
 "map <space> i<space><Esc>
 "map <S-space> a<space><Esc>
 
-
 "imap { {<CR><Tab><CR>}<Esc>k$i
 "
 "inoremap {      {}<Left>
@@ -178,18 +176,14 @@ nmap <S-Space> a<space><Esc>
 " single character insert
 nmap <Space> i<space><Esc>l
 
-
 " this should help with folding single comment line (//)
 syn match comment "\v(^\s*//.*\n)+" fold
-
 
 map <C-j> 4j
 map <C-k> 4k
 
-
 "To change two vertically split windows to horizonally split
 "Ctrl-W t Ctrl-W K
-
 
 "Horizontally to vertically:
 "Ctrl-W t Ctrl-W H
@@ -228,15 +222,12 @@ nmap à a
 "nmap ò `o
 "nmap ù `u
 
-
 " Search mappings: These will make it so that going to the next one in a
 " search will center on the line it's found in.
 map N Nzz
 map n nzz
 
-
 vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>
-
 
 "My vim statusline is hidden/only appears in split windows!¶
 set laststatus=2
@@ -247,7 +238,6 @@ let g:NERDTreeDirArrows=0
 
 "strip trailling spaces at the end every line of any saved coffeescript file
 autocmd BufWritePre *.coffee :%s/\s\+$//e
-
 
 " Removes trailing spaces
 :function! TrimWhiteSpace()
@@ -279,7 +269,6 @@ endif
 "nnoremap <silent> <Leader>r :VimroomToggle<CR>:AirlineToggle<CR>
 nnoremap <silent> <Leader>m  :call ToggleVimRoom()<CR>
 
-
 " hack: Quit after exiting Vimroom
 let g:airline_on = 0
 function! ToggleVimRoom()
@@ -296,7 +285,6 @@ endfunction
 
 "temp fix for Kinesys Advantage Keyboard
 nnoremap > @
-
 
 " swap files (.swp) in a common location
 " // means use the file's full path
