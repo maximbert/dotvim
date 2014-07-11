@@ -19,6 +19,7 @@ set showcmd
 set foldcolumn=5                  " Add a left margin
 set showtabline=0                 " don't show the tab bar
 
+set number
 set relativenumber
 
 "if no extension, assume casual text, and hide line numbers
