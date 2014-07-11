@@ -114,7 +114,6 @@ nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 
-map <F5> :NERDTreeToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
 
 " tab navigation like firefox
@@ -204,9 +203,6 @@ endif
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
-" close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " prevent vim from removing indent on commented lines using a # (python, coffeescript)
 ":inoremap # X^H#
 inoremap # x<Esc>r#a
@@ -234,8 +230,6 @@ vnoremap <C-r> "hy:%s/<C-r>h//g<left><left><left>
 set laststatus=2
 
 let g:Powerline_symbols = 'fancy'
-let g:NERDTreeDirArrows=0
-
 
 "strip trailling spaces at the end every line of any saved coffeescript file
 autocmd BufWritePre *.coffee :%s/\s\+$//e
@@ -302,3 +296,16 @@ set undodir=~/.vim/_undo/
 " Ctrl+P
 nnoremap <leader>p :CtrlPMixed<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+
+" Auto change the directory to the current file I'm working on
+autocmd BufEnter * lcd %:p:h
+
+map <F5> :NERDTreeToggle<CR>
+
+" close vim if the only window left open is a NERDTree?
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+let g:NERDTreeDirArrows=0
+let NERDTreeShowBookmarks=1      " show bookmarks when NERDTree launches
+"au VimEnter * NERDTree /Users/maximbert    " show bookmarks on VIM startup
+"autocmd VimEnter * NERDTree UGC
