@@ -64,6 +64,9 @@
 [submodule "bundle/go-lang"]
 	path = bundle/go-lang
 	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "bundle/reveal-in-finder"]
+	path = bundle/reveal-in-finder
+	url = https://github.com/henrik/vim-reveal-in-finder.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
