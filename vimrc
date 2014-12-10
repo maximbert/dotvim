@@ -322,3 +322,6 @@ let NERDTreeShowBookmarks=1      " show bookmarks when NERDTree launches
 
 " close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+set list
+set listchars=tab:❱,trail:␣,extends:#,nbsp:␣
