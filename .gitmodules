@@ -64,6 +64,9 @@
 [submodule "bundle/go-lang"]
 	path = bundle/go-lang
 	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "bundle/polyglot"]
+	path = bundle/polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
 [submodule "bundle/reveal-in-finder"]
 	path = bundle/reveal-in-finder
 	url = https://github.com/henrik/vim-reveal-in-finder.git
@@ -73,3 +76,9 @@
 [submodule "bundle/fanfingtastic"]
 	path = bundle/fanfingtastic
 	url = https://github.com/dahu/vim-fanfingtastic.git
+[submodule "bundle/ctrlp-modified"]
+	path = bundle/ctrlp-modified
+	url = https://github.com/jasoncodes/ctrlp-modified.vim.git
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = https://github.com/tpope/vim-repeat.git
