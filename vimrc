@@ -315,10 +315,10 @@ autocmd BufEnter * lcd %:p:h
 
 map <F5> :NERDTreeToggle<CR>
 
-" close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 let g:NERDTreeDirArrows=0
 let NERDTreeShowBookmarks=1      " show bookmarks when NERDTree launches
 "au VimEnter * NERDTree /Users/maximbert    " show bookmarks on VIM startup
 "autocmd VimEnter * NERDTree UGC
+
+" close vim if the only window left open is a NERDTree?
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
