@@ -241,6 +241,11 @@ let g:Powerline_symbols = 'fancy'
 
 "strip trailling spaces at the end every line of any saved coffeescript file
 autocmd BufWritePre *.coffee :%s/\s\+$//e
+autocmd BufWritePre *.js :%s/\s\+$//e
+
+if has("autocmd")
+  au BufReadPost *.js retab
+endif
 
 " Removes trailing spaces
 :function! TrimWhiteSpace()
