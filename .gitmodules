@@ -61,9 +61,6 @@
 [submodule "bundle/jsbeautify"]
 	path = bundle/jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify.git
-[submodule "bundle/go-lang"]
-	path = bundle/go-lang
-	url = https://github.com/jnwhiteh/vim-golang.git
 [submodule "bundle/polyglot"]
 	path = bundle/polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
@@ -82,3 +79,18 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/session"]
+	path = bundle/session
+	url = https://github.com/xolox/vim-session.git
+[submodule "bundle/ag"]
+	path = bundle/ag
+	url = https://github.com/rking/ag.vim
+[submodule "bundle/tmux-navigator"]
+	path = bundle/tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "bundle/geeknote"]
+	path = bundle/geeknote
+	url = https://github.com/neilagabriel/vim-geeknote
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
