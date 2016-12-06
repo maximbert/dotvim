@@ -205,11 +205,11 @@ map <Bslash><Bslash> :s/^/\/\/<CR><Esc>==
 "map <Bslash>: :s/\/\///<CR><ESC>
 
 " Gedit style mapping
-map <tab> >gv
-map <S-tab> <gv
+"map <tab> >gv
+"map <S-tab> <gv
 
-nmap <tab> I<space><space><c-c>
-nmap <S-tab> 0xx^
+"nmap <tab> I<space><space><c-c>
+"nmap <S-tab> 0xx^
 
 " the following seems to conflict with MacVim...
 "map <A-down> ddp
@@ -226,7 +226,11 @@ inoremap {<CR>  {<CR>}<Esc>O
 "inoremap {{     {
 inoremap {}     {}
 
-imap <tab> <C-P>
+"imap <tab> <C-P>
+let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 
 "map <S-Enter> O<Esc>
 map <S-Enter> O<Esc>
@@ -245,8 +249,8 @@ nmap <Space> i<space><Esc>l
 " this should help with folding single comment line (//)
 syn match comment "\v(^\s*//.*\n)+" fold
 
-map <C-j> 4j
-map <C-k> 4k
+"map <C-j> 4j
+"map <C-k> 4k
 
 "To change two vertically split windows to horizonally split
 "Ctrl-W t Ctrl-W K
@@ -258,9 +262,9 @@ map <C-k> 4k
 iabbr fun function){<left><left>
 
 "to use, type 'co(', i.e. with the parenthesis)
-iabbr co console.log);<esc>hi
+"iabbr co console.log);<esc>hi
 "iabbr co console.log
-iabbr cd console.dir);<left><left>
+"iabbr cd console.dir);<left><left>
 
 
 " turn on syntax highlighting for CoffeeScript (using ~/.vim/syntax/coffee.vim)
@@ -525,3 +529,5 @@ noremap <Leader>en :Geeknote<CR>
 cmap w!! w !sudo tee > /dev/null %
 
 let g:gitgutter_eager = 0
+
+let NERDTreeIgnore = ['\.pyc$'] " NERDTree should ignore .pyc files
