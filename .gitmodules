@@ -22,12 +22,6 @@
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "bundle/coffeescript"]
-	path = bundle/coffeescript
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/stylus"]
-	path = bundle/stylus
-	url = https://github.com/wavded/vim-stylus.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -40,9 +34,6 @@
 [submodule "bundle/git"]
 	path = bundle/git
 	url = https://github.com/tpope/vim-git.git
-[submodule "bundle/preview"]
-	path = bundle/preview
-	url = https://github.com/greyblake/vim-preview.git
 [submodule "bundle/commandT"]
 	path = bundle/commandT
 	url = https://github.com/wincent/Command-T.git
@@ -79,30 +70,21 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "bundle/session"]
-	path = bundle/session
-	url = https://github.com/xolox/vim-session.git
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = https://github.com/rking/ag.vim
 [submodule "bundle/tmux-navigator"]
 	path = bundle/tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
-[submodule "bundle/geeknote"]
-	path = bundle/geeknote
-	url = https://github.com/neilagabriel/vim-geeknote
-[submodule "bundle/tagbar"]
-	path = bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "bundle/airline-themes"]
 	path = bundle/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "bundle/typescript"]
-	path = bundle/typescript
-	url = https://github.com/leafgarland/typescript-vim
+[submodule "bundle/tern"]
+	path = bundle/tern
+	url = git@github.com:ternjs/tern_for_vim.git
 [submodule "bundle/vim-misc"]
 	path = bundle/vim-misc
 	url = git@github.com:xolox/vim-misc.git
+[submodule "bundle/tmuxline"]
+	path = bundle/tmuxline
+	url = git@github.com:edkolev/tmuxline.vim.git
