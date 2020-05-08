@@ -1,7 +1,7 @@
 execute pathogen#infect()
 
 colorscheme molokai
-set gfn=Menlo\ for\ Powerline:h17
+set gfn=Menlo\ for\ Powerline:h19
 
 set linespace=3 "Prefer a slightly higher line height
 
@@ -57,8 +57,8 @@ noremap <Right> <NOP>
 "inoremap <Left> <NOP>
 "inoremap <Right> <NOP>
 
-ino jj <esc>
-cno jj <c-c>
+"ino jj <esc>
+"cno jj <c-c>
 "ino hh <esc>
 "cno hh <esc>
 "ino kk <c-c>
@@ -142,7 +142,7 @@ endfunction
 "nnoremap <silent> <expr> <CR> Highlighting()
 
 nnoremap <Esc> :noh<CR><Esc>:echo ''<CR>
-nnoremap <C-c> :noh<CR><Esc>:echo ''<CR>
+"nnoremap <C-c> :noh<CR><Esc>:echo ''<CR>
 
 set wildmenu
 "set wildmode=longest:full,full
@@ -392,8 +392,6 @@ nnoremap <leader>p :CtrlPMRU<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMixed<CR>
 
-let g:ctrlp_working_path_mode = ''
-
 " Auto change the directory to the current file I'm working on
 autocmd BufEnter * lcd %:p:h
 
@@ -437,6 +435,9 @@ else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 endif
 
+" search in .git/.hg if it exists, else the current working directory.
+" " (default is 'ra' which also searches in parent of current file, rarely
+" " what you want, especially if you're editing ~/.vimrc or browsing help)
 let g:ctrlp_working_path_mode = 'r'
 
 
@@ -465,7 +466,8 @@ command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
 "nmap ,w :StripTrailingWhitespaces<CR>
 
 
-cd /Users/maximbert/Development/panda
+"cd /Users/maximbert/Development/panda
+cd /Users/mimbert/dev
 
 
 let g:yankring_history_file = '.vim/_yankring-history'
@@ -511,17 +513,16 @@ let g:multi_cursor_quit_key='<C-c>'
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
-python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
+"python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
 
-" search in .git/.hg if it exists, else the current working directory.
-" " (default is 'ra' which also searches in parent of current file, rarely
-" " what you want, especially if you're editing ~/.vimrc or browsing help)
-let g:ctrlp_working_path_mode = 'r'
 
 " tell ag to look for the project root, not the current PWD
 let g:ag_working_path_mode="r"
 
 noremap <Leader>en :Geeknote<CR>
+
+nmap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>T <C-]>
 
 " let g:tagbar_ctags_bin = '/Users/maximbert/.vim/bundle/ctags-5.8/'
 
@@ -531,3 +532,16 @@ cmap w!! w !sudo tee > /dev/null %
 let g:gitgutter_eager = 0
 
 let NERDTreeIgnore = ['\.pyc$'] " NERDTree should ignore .pyc files
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['xo']
+
+noremap <Leader>c iconsole.log({});<Esc>F}i
