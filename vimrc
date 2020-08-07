@@ -331,8 +331,8 @@ endif
 " when joining lines, trim AND preserve indentation (similar to gJ)
 nmap J J:call TrimWhiteSpace()<CR>
 
-nmap gn <Plug>GitGutterNextHunk
-nmap gN <Plug>GitGutterPrevHunk
+nmap gn <Plug>(GitGutterNextHunk)
+nmap gN <Plug>(GitGutterPrevHunk)
 
 map <c-b> :call JsBeautify()<cr>
 
