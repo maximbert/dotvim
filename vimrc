@@ -545,3 +545,5 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 "let g:syntastic_javascript_checkers = ['xo']
 
 noremap <Leader>c iconsole.log({});<Esc>F}i
+
+nnoremap <leader>cd :cd %:p:h<CR>
